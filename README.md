@@ -11,7 +11,7 @@
 </div>
 
 <div align="center">
-<h2>Domain<h2>
+<h2>Application<h2>
 </div>
 
 
