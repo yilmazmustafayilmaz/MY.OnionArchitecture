@@ -10,8 +10,7 @@
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/layers.jpg" width="40%" height="40%">
 </div>
 
-<div align="center">
 <h2>Application<h2>
-</div>
+
 
 
