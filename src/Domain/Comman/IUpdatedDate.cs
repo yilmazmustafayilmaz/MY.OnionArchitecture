@@ -1,4 +1,4 @@
-﻿namespace Persistence.Comman;
+﻿namespace Domain.Comman;
 
 public interface IUpdatedDate
 {

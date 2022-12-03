@@ -1,6 +1,6 @@
-using Persistence.Comman;
+using Domain.Comman;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public class Author : BaseEntity, ICreatedDate, IUpdatedDate
 {

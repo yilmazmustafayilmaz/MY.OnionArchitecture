@@ -1,6 +1,6 @@
-using Persistence.Comman;
+using Domain.Comman;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public class Article : BaseEntity, ICreatedDate, IUpdatedDate
 {
@@ -10,7 +10,7 @@ public class Article : BaseEntity, ICreatedDate, IUpdatedDate
     public DateTime CreatedDate { get; set; }
     public DateTime UpdatedDate { get; set; }
 
-    public Author Author { get; set; }
+    public virtual Author Author { get; set; }
 }
 
 
