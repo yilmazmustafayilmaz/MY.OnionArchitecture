@@ -29,6 +29,7 @@
 <h2>Fluent Api</h2>
 <p>Entity Framework Core konusundan bahşetmişken Fluent Api hakkında da birkaç bişey yazmak istedim ve uygulama içerisinde bir örnek verdim. Fluent Api, Entity Framework Code First yapısını kullandığımızda veri tabanı sınıflarımızın özellikleri ve bu sınıflarımızın ilişkilerini oldukça geniş bir şekilde yapılandırabilmemize olanak sağlayan bir yapıdır.</p>
 <div align="center">
-<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/layers.jpg" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentApi1.jpg" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentApi2.jpg" width="40%" height="40%">
 </div>
 
