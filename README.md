@@ -1,5 +1,6 @@
 
 <div align="center">
+<h2></h2>
 <h1>Onion Architecture (Soğan Mimarisi)</h1>
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/onionArchitecture.png" width="50%" height="50%">
 </div>
@@ -7,7 +8,6 @@
 <div align="center">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/layers.jpg" width="40%" height="40%">
 </div>
-
 <h2>Application</h2>
 <p>Application katmanı, Domain katmanında bulunan veritabanı nesnelerinin CRUD işlemlerinin arayüzünün (Interface) tutulduğu katmandır. Burada amaç gevşek bağlı (Loose Coupling) bir sistem oluşturmaktır.</p>
 <h2>Domain</h2>
@@ -17,7 +17,11 @@
 <h2>Persistence</h2>
 <p>Persistence katmanı, veritabanı ile ilgili işlemerimizi (Context, Migration, Configuration) gerçekleştirdiğimiz katmandır. Buna ek olarak Application katmanında bulunan arayüzlerinde (Interface) bu katmanda implement işlemleri gerçekleştirilir.</p>
 <h2>Presentation</h2>
-<p>Presentation katmanı, bu katmanda projenin kullanıcı ile nasıl iletişime geçeceğini belirliyoruz (Web App, Web Api, Mvc, Console App)</p>
+<p>Presentation katmanı, bu katmanda projenin kullanıcı ile nasıl iletişime geçeceğini belirliyoruz (Web App, Web Api, Mvc, Console App)</p><h2></h2>
 
+<div align="center">
+<h1>Entity Framework Core</h1>
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/onionArchitecture.png" width="50%" height="50%">
+</div>
 
 
