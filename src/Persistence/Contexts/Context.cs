@@ -24,7 +24,7 @@ public class Context : DbContext
 
         foreach (var modifiedEntry in modifiedEntries)
         {
-            if (modifiedEntry.State == EntityState.Modified)         
+            if (modifiedEntry.State == EntityState.Modified)
                 ((IUpdatedDate)modifiedEntry.Entity).UpdatedDate = DateTime.UtcNow;
         }
 
