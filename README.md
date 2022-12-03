@@ -21,7 +21,9 @@
 
 <div align="center">
 <h1>Entity Framework Core</h1>
-<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/onionArchitecture.png" width="50%" height="50%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/entityFrameworkCore.png" width="50%" height="50%">
 </div>
-
+<p>Entity Framework Core (EF Core), Entity Framework veri erişim teknolojinin basit, genişletilebilir, açık kaynak ve platformlar arası bir sürümüdür. EF Core nesne ilişkisel bir eşleyici (ORM) aracı olarak görev yapabilir. DotNet geliştiricilerinin .Net nesnelerini kullanarak bir veritabanıyla çalışmasını sağlar. Aynı zamanda EF Core birden fazla veritabanı altyapısını destekler</p>
+<h2>Object-Relational Mapping (ORM)</h2>
+<p>Uygulama geliştirirken hiç şüphesiz ihtiyaç duyduğumuz şeylerden birisi veritabanı bağlantısı oluşturmaktır. Ancak bu bağlantıyı oluştururken yönetiminide kullandığımız dilin yapısı ile yapmayı tercih ederiz işte tam bu noktada yardımımıza ORM araçları yetişiyor ve kod içerisindeki sql komutlarını ortadan kaldırıyor. Veritabanımızda bulunan tablolara karşılık bir sınıf, kolonlardaki alanlara karşılık gelecek property oluşturuyor bununla beraber veritabanındaki bulunan kayıtlarımızada ait olduğu sınıfta bir obje olarak erişebilmemize olanak sağlıyor. ORM sanal olarak veritabanındaki bir tablonun ona karşılık oluşturulan bir nesne ile eşleşmesidir.</p>
 
