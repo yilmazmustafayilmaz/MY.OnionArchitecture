@@ -17,7 +17,8 @@ public class QueryRepository<TEntity> : IQueryRepository<TEntity> where TEntity 
 
     public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null, bool tracking = true)
     {
-        var query = Table.Where(filter).AsQueryable();
+        var query = Table.AsQueryable();
+        if (filter is not null) query = query.Where(filter);
         if (!tracking) query = query.AsNoTracking();
         return query;
     }
