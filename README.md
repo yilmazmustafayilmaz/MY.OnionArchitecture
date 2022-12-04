@@ -33,5 +33,10 @@
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentApi2.jpg" width="40%" height="40%">
 </div>
 <h2>Code First</h2>
-<p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p>
+<p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p><h2></h2>
+
+<div align="center">
+<h1>Generic Repository Pattern</h1>
+</div>
+<p>Bir yazılım projesinin olmazsa olmaz konusu olan Repository Pattern hakkında biraz konuşalım. Generic Repository Pattern adından da anlaşılacağı gibi genel bir repository yapısı kurmamızı sağlıyor. Bu ne demek derseniz ortak veritabanı işlemlerimiz için merkezi ve genel bir yapı kurup her bir modelin bu yapı üzerinden işlem gerçekleştirmesini sağlamaktır. Daha anlaşılır bir örnek vermek gerekirse oluşturduğumuz her veritabanı nesnemiz için ortak olan Create, Remove, Update, Delete (CRUD) işlemleri bulunmaktadır. Dont Repeat Yourself (DRY) prensibine uymak amacıyla bu CRUD işlemlerini her seferinde tekrarlamak yerine ortak bir repository sınıfı içerisinde oluşturup ihtiyaç dahilinde oluşturmuş olduğumuz sınıflarda kalıtım yoluyla kullanılmasıdır.</p>
 
