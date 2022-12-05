@@ -19,9 +19,9 @@
   </ul>
 </p>
 <h2>Abstraction (Soyutlama)</h2>
-<p>Nesneler, sadece diğer uygulamaların kullanımı ile ilgili olan ve gereksiz olan uygulama kodlarını gizleyen iç mekanizmayoı ortaya çıkarır bu konsept geliştiricilerin de zaman içerisinde daha kolay ekleme ve deüişiklik yapmalarına yardımcı olmaktadır.</p>
+<p>Nesneler, sadece diğer uygulamaların kullanımı ile ilgili olan ve gereksiz olan uygulama kodlarını gizleyen iç mekanizmayı ortaya çıkarır bu konsept geliştiricilerin de zaman içerisinde daha kolay ekleme ve deüişiklik yapmalarına yardımcı olmaktadır.</p>
 <h2>Encapsulation (Kapsülleme)</h2>
-<p>Her bir nesnenin uygulanması ile durumu özel olarak tanımlanan bir sınır ya da sınıf içinde tutulmaktadır. Diğer nesneler de bu sınıfa ya da değişikliği yapma yetkisine sahip değil. Ancak sadece genel işlevler ya da yöntemler listesi çağırılabilir. Veri gizlemenin söz konusu bu özelliği daha çok program güvenliği sağlamaktadır ve istenmeyen verilerin bozulmalarını da önler.</p>
+<p>Her bir nesnenin uygulanması ile durumu özel olarak tanımlanan bir sınır (scope) ya da sınıf içinde tutulmaktadır. Diğer nesneler de bu sınıfa ya da değişikliği yapma yetkisine sahip değil. Ancak sadece genel işlevler ya da yöntemler listesi çağırılabilir. Veri gizlemenin söz konusu bu özelliği daha çok program güvenliği sağlamaktadır ve istenmeyen verilerin bozulmalarını da önler.</p>
 <h2>Inheritance (Miras Alma)</h2>
 <p>Nesneler arasındaki ilişkiler ile alt sınıflar atanabilirler ve bu sayede geliştiricilerin benzersiz olan bir hiyerarşiyi korurken ortak mantığı da tekrar kullanmalarına izin verilir. Nesne yönelimli programlamanın bu özelliği daha da kapsamlı bir veri analizini zorlar ve geliştirme süresini azaltır, yüksek bir doğruluk düzeyini sağlar.</p>
 <h2>Polmorphism (Çok Biçimlilik)</h2>
@@ -88,7 +88,6 @@
     <li>Gereksiz yorum kullanımından kaçının.</li>
     <li>Yorumu yazma sebebinizi anlaşılır dille açıklayın.</li>
     <li>Kodun açıklaması şeklinde yazın.</li>
-    <li></li>
   </ul>
 </p>
 <h2>Test Kuralları</h2>
@@ -133,7 +132,7 @@
 <p>Yazılan kodlar ekleme ve geliştirilme için açık ancak köklü değişiklikler için kapalı olmalıdır. Open Closed geniş çapta uygulanabilen ancak değişmeden kalan varlıklar gerektirir. Bu noktada çok biçimlilik (polymorphism) ile özel davranışlara sahip yinelenen varlıklar yaratmamız gerekir.</p>
 <h2>Liskov Substitution Principle</h2>
 <p>Bir programdaki nesneler o programın doğruluğunu değiştirmeden alt türlerinin örnekleriyle değiştirilebilir olmalıdır yani her alt sınıf, alt sınıfa özgü tüm yeni davranışlarla birlikte temel sınıftaki tüm davranışları korumalıdır. Alt sınıf, aynı istekleri işleyebilmeli ve üst sınıfıyla aynı görevleri tamamlayabilmelidir.</p>
-<h2>Inteface Segregation Principle</h2>
+<h2>Interface Segregation Principle</h2>
 <p>İsteme özel birden fazla arayüz , tek bir genel amaçlı arayüzden daha iyidir. ISP’de sınıfların kullanmadıkları davranışları içermesi istenmez. ISP Sayesinde; Daha az kod taşıyan metotlar elde edilir. Kodun ihtiyaç durumunda güncellemesi hızlanır. Davranıştan bir metot sorumlu olduğu için davranışta karşılaşılan problem hızlı bir şekilde çözülür.</p>
 <h2>Dependency Inversion Principle</h2>
 <p>Sınıf ve doğru özellekliklerin sınıfa eklenmesi açısından en önemli Nesne Yönelimli Programla konularından biriside Abstraction (Soyulama) konusudur. Yüksek seviyeli modüller, düşük seviyeli modüllere bağlı olmamalıdır. Bunun yerine, her ikisi de abstraction veya interfacelere bağlı olmalıdır. Abstraction detaylara bağlı olmalıdır tam tersine detaylar soyutlamaya bağlı olmalıdır.</p>
@@ -158,7 +157,7 @@
 <h2>Design Pattern Kategorileri</h2>
 <p>Tasarım Desenleri genel olarak 3 ana başlıkta incelenir. Bunlar şunlardır:
   <ul>
-    <li><b>eational Patterns (Yaratımsal Desenler):</b> Nesnelerin oluşturulmasında ve yönetilmesinde kullanılan bir desendir. Bu program akışında hangi nesneye                                                               ihtiyaç varsa onu oluşturmada esneklik ve kolaylık sağlar.</li>
+    <li><b>Creational Patterns (Yaratımsal Desenler):</b> Nesnelerin oluşturulmasında ve yönetilmesinde kullanılan bir desendir. Bu program akışında hangi nesneye                                                               ihtiyaç varsa onu oluşturmada esneklik ve kolaylık sağlar.</li>
     <li><b>Structural Patterns (Yapısal Desenler):</b> Birden fazla sınıfın bir işi yerine getirirken nasıl davranacağını belirlemek için kullanılan desenlerdir.</li>
     <li><b>Behavioral Patterns (Davranışsal Desenler):</b> Nesnelerin birbirleri ile ilişkisini düzenleyen desendir.</li>
   </ul>
