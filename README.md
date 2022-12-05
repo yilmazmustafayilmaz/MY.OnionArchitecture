@@ -19,7 +19,7 @@
   </ul>
 </p>
 <h2>Abstraction (Soyutlama)</h2>
-<p>Nesneler, sadece diğer uygulamaların kullanımı ile ilgili olan ve gereksiz olan uygulama kodlarını gizleyen iç mekanizmayı ortaya çıkarır bu konsept geliştiricilerin de zaman içerisinde daha kolay ekleme ve deüişiklik yapmalarına yardımcı olmaktadır.</p>
+<p>Nesneler, sadece diğer uygulamaların kullanımı ile ilgili olan ve gereksiz olan uygulama kodlarını gizleyen iç mekanizmayı ortaya çıkarır bu konsept geliştiricilerin de zaman içerisinde daha kolay ekleme ve değişiklik yapmalarına yardımcı olmaktadır.</p>
 <h2>Encapsulation (Kapsülleme)</h2>
 <p>Her bir nesnenin uygulanması ile durumu özel olarak tanımlanan bir sınır (scope) ya da sınıf içinde tutulmaktadır. Diğer nesneler de bu sınıfa ya da değişikliği yapma yetkisine sahip değil. Ancak sadece genel işlevler ya da yöntemler listesi çağırılabilir. Veri gizlemenin söz konusu bu özelliği daha çok program güvenliği sağlamaktadır ve istenmeyen verilerin bozulmalarını da önler.</p>
 <h2>Inheritance (Miras Alma)</h2>
