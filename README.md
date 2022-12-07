@@ -235,6 +235,13 @@
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentApi2.jpg" width="40%" height="40%">
 </div>
 <h2>Code First</h2>
+<p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p>
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentApi1.jpg" width="40%" height="40%">
+</div>
+<h2>Table Per Type</h2>
+<p>Table Per Type (TPT) Entityler arasında oluşan kalıtımsal ilişki durumunda ortaya çıkan bir davranış modelidir. Bu model ile birlikte veritabanında bulunan bir tablodaki belirli kolonların kendisinden kalıtım almış olan diger tablolarda birebir ilişki ile tutulmasıdır. Bunun ne demek olduğunu daha iyi anlamak için gerçek hayat ile ilişkili küçük bir örnek düşünelim. Bir bisiklet dükkanında 2 farklı bisiklet çeşidi bulunsun bunu veritabanında modellediğimizi düşünürsek birbirini tekrar eden alanları Bikes isminde dükkandaki bütün bisikletlerin kaydını tutacak bir tabloda tutarız ve bu base class'dan kalıtım alan indirimli ve ikinci el derived class'lar oluştururuz bu sayede her bisiklette bulunması gereken kolonların tekrarından kaçınırız.</p>
+<h2>Table Per Hierarchy</h2>
 <p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p><h2></h2>
 
 <div align="center">
