@@ -237,12 +237,21 @@
 <h2>Code First</h2>
 <p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p>
 <h2>Table Per Type</h2>
-<p>Table Per Type (TPT) Entityler arasında oluşan kalıtımsal ilişki durumunda ortaya çıkan bir davranış modelidir. Bu model ile birlikte veritabanında bulunan bir tablodaki belirli kolonların kendisinden kalıtım almış olan diger tablolarda birebir ilişki ile tutulmasıdır. Bunun ne demek olduğunu daha iyi anlamak için gerçek hayat ile ilişkili küçük bir örnek düşünelim. Bir bisiklet dükkanında 2 farklı bisiklet çeşidi bulunsun bunu veritabanında modellediğimizi düşünürsek birbirini tekrar eden alanları Bisikletler isminde dükkandaki bütün bisikletlerin kaydını tutacak bir tabloda tutarız ve bu base class'dan kalıtım alan indirimli ve ikinci el derived class'lar oluştururuz. Bu sayede her bisiklette bulunması gereken kolonların tekrarından kaçınırız aynı zamanda bu durum aralarında mantıksal bir kalıtım işlemi olduğu anlamınada gelir.</p>
+<p>Table Per Type (TPT) Entityler arasında oluşan kalıtımsal ilişki durumunda ortaya çıkan bir davranış modelidir. Bu model ile birlikte veritabanında bulunan bir tablodaki belirli kolonların kendisinden kalıtım almış olan diger tablolarda birebir ilişki ile tutulmasıdır. Bunun ne demek olduğunu daha iyi anlamak için gerçek hayat ile ilişkili küçük bir örnek düşünelim. Bir bisiklet dükkanında 2 farklı bisiklet çeşidi bulunsun bunu veritabanında modellediğimizi düşünürsek birbirini tekrar eden alanları Bisikletler isminde dükkandaki bütün bisikletlerin kaydını tutacak bir tabloda tutarız ve bu base (temel) class'dan kalıtım alan indirimli ve ikinci el derived (türetilmiş) class'lar oluştururuz. Bu sayede her bisiklette bulunması gereken kolonların tekrarından kaçınırız aynı zamanda bu durum aralarında mantıksal bir kalıtım işlemi olduğu anlamınada gelir.</p>
 <div align="center">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/TablePerType.jpg" width="40%" height="40%">
 </div>
 <h2>Table Per Hierarchy</h2>
-<p>Code First uygulamada kullanılan veritabanı ile programlama dili arasında bir bağ oluşturur. Uygulamanın ihtiyacı olan veritabanı işlemlerini Visual Studio üzerinden gerçekleştirmemize imkan sağlayan bir yaklaşımdır. Code First yaklaşımı veritabanı işlemlerini veritabanı arayüzünü kullanmadan yada oldukça az ihtiyaç duyarak gerçekleştirmemizi amaçlar.</p><h2></h2>
+<p>Table Per Hierarchy (TPH) Entityler arasında oluşan kalıtımsal ilişki durumunda ortaya çıkan bir diğer davranış modelidir. TPH davranış modelinde birbiri ile kalıtımsal hiyerarşi içinde bulunan tüm veritabanı nesneleri için veritabanında tek tablo oluşturulur. Veriler tutulurken base (temel) class içerisinde bulunan alanlar ve işlemi gerçekleştirdiğimiz derived (türetilmiş) class içindeki alanlar doldurulurken diger alanlar null şekilde bırakılır. Peki derived (türetilmiş) class'ları birbirinden nasıl ayırt ediyoruz işte burada EF Core tabloya Discriminator (Ayrımcı) adında bir alan daha ekliyor. Şimdi TPH davranış modelini de daha iyi anlamak için gerçek hayat örneği oluşturalım. Telefon ve tablet satışı yapan bir dükkanda tüm marka ve özelliklerin tutulduğu bir veritabanı modelleyelim bize lazım olan bir adet base (temel) class bu sınıf içerisinde satıcı bilgisi tutuyor olsun ve bu sınıftan kalıtım alan 2 tane derived (türetilmiş) class oluşturalım böylece elimizde 3 tane veritabanı nesnesi olduğu halde TPH davranış modeli bizim için bunları veritanında tek bir tablo halinde tutacaktır.
+Peki bu bize ne sağlar;
+<ul>
+  <li>Tüm veriler tek bir tabloda saklandığından CRUD işlemlerinde yüksek performans.</li>
+  <li>Veritabanındaki minimum tablo sayısı.</li>
+</ul>
+Proje içerisinde FileUpload yapısı Table Per Hierarchy (TPH) davranış modeli kullanılarak yapılmıştır.
+</p><div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/TablePerType.jpg" width="40%" height="40%">
+</div><h2></h2>
 
 <div align="center">
 <h1>Generic Repository Pattern</h1>
