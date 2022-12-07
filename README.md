@@ -250,7 +250,7 @@ Peki bu bize ne sağlar;
 </ul>
 Proje içerisinde FileUpload yapısı Table Per Hierarchy (TPH) davranış modeli kullanılarak yapılmıştır.
 </p><div align="center">
-<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/TablePerType.jpg" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/tablePerHierarchy.jpg" width="40%" height="40%">
 </div><h2></h2>
 
 <div align="center">
