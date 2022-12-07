@@ -10,6 +10,8 @@ public class Context : DbContext
     public Context(DbContextOptions<Context> options) : base(options) { }
     public DbSet<Author> Authors { get; set; }
     public DbSet<Article> Articles { get; set; }
+    public DbSet<BaseFile> BaseFiles { get; set; }
+    public DbSet<AuthorImageFile> AuthorImageFiles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -11,6 +11,7 @@ public class Author : BaseEntity, ICreatedDate, IUpdatedDate
     public DateTime UpdatedDate { get; set; }
 
     public virtual ICollection<Article> Articles { get; set; }
+    public virtual ICollection<AuthorImageFile> AuthorImageFiles { get; set; }
 }
 
 
