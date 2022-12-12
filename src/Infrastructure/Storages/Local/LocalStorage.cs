@@ -1,4 +1,3 @@
-using Application.Storages;
 using Application.Storages.Local;
 using Microsoft.AspNetCore.Http;
 
@@ -8,7 +7,7 @@ public class LocalStorage : Storage, ILocalStorage
 {
     public async Task DeleteAsync(string path)
     {
-        if(File.Exists(path)) File.Delete(path);
+        if (File.Exists(path)) File.Delete(path);
     }
 
     public async Task<List<(string fileName, string path)>> UploadAsync(IFormFileCollection files, string path)

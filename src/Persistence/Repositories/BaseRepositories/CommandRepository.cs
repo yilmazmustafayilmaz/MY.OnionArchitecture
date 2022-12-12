@@ -18,30 +18,36 @@ public class CommandRepository<TEntity> : ICommandRepository<TEntity> where TEnt
     public async Task<TEntity> AddAsync(TEntity entity)
     {
         await Table.AddAsync(entity);
+        await SaveChangesAsync();
         return entity;
     }
 
     public async Task<bool> AddRangeAsync(List<TEntity> entities)
     {
         await Table.AddRangeAsync(entities);
+        await SaveChangesAsync();
         return true;
     }
 
-    public TEntity Remove(TEntity entity)
+    public async Task<TEntity> RemoveAsync(TEntity entity)
     {
         Table.Remove(entity);
+        await SaveChangesAsync();
         return entity;
     }
 
     public async Task<TEntity> RemoveByIdAsync(string id)
     {
         var entity = await Table.FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
-        return Remove(entity);
+        await RemoveAsync(entity);
+        await SaveChangesAsync();
+        return entity;
     }
 
-    public bool RemoveRange(List<TEntity> entities)
+    public async Task<bool> RemoveRangeAsync(List<TEntity> entities)
     {
         Table.RemoveRange(entities);
+        await SaveChangesAsync();
         return true;
     }
 
@@ -50,9 +56,10 @@ public class CommandRepository<TEntity> : ICommandRepository<TEntity> where TEnt
         return await _context.SaveChangesAsync();
     }
 
-    public TEntity Update(TEntity entity)
+    public async Task<TEntity> UpdateAsync(TEntity entity)
     {
         Table.Update(entity);
+        await SaveChangesAsync();
         return entity;
     }
 }

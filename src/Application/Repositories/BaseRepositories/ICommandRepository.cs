@@ -6,10 +6,10 @@ public interface ICommandRepository<TEntity> : IBaseRepository<TEntity> where TE
 {
     Task<TEntity> AddAsync(TEntity entity);
     Task<bool> AddRangeAsync(List<TEntity> entities);
-    TEntity Remove(TEntity entity);
+    Task<TEntity> RemoveAsync(TEntity entity);
     Task<TEntity> RemoveByIdAsync(string id);
-    bool RemoveRange(List<TEntity> entities);
-    TEntity Update(TEntity entity);
+    Task<bool> RemoveRangeAsync(List<TEntity> entities);
+    Task<TEntity> UpdateAsync(TEntity entity);
     Task<int> SaveChangesAsync();
 }
 
