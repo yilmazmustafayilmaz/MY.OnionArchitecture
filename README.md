@@ -290,3 +290,8 @@ Temel olarak Mediator iki işlem gerçekleştirir.
 <div align="center">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/mediator.png" width="40%" height="40%">
 </div><h2></h2>
+
+<div align="center">
+<h1>AutoMapper</h1>
+</div>
+<p>AutoMapper birbirinden farklı tipteki complex objeleri birbirine otomatik bir şekilde dönüştürmeye yardımcı olan kütüphanedir. Kodun kirli görüntüsünden bizi kurtararak birden fazla satırda objenin her bir elemanını tek tek birbirine dönüştürmek yerine tek satırda objenin kendisini dönüştürmemize olanak sağlayarak fazla satır ile kodun kötü görünmesini engeller</p><h2></h2>
