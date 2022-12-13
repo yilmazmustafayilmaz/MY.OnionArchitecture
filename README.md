@@ -274,5 +274,17 @@ Avantajları;
 </p>
 <div align="center">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/CqrsPattern.png" width="60%" height="40%">
+</div><h2></h2>
+
+<div align="center">
+<h1>Mediator Design Pattern</h1>
 </div>
+<p>Mediator birden çok nesne veya sınıf arasındaki iletişim karmaşıklığını azaltmak için kullanılır. Bu pattern, normalde farklı sınıflar arasındaki tüm iletişimleri yöneten ve gevşek bağlantıyla kodun kolay bakımını destekleyen bir arabulucu sınıfı sağlar. Mediator pattern Behavioural Pattern (Davranışsal Desenler) kategorisine girer.
+Temel olarak Mediator iki işlem gerçekleştirir.
+<ul>
+  <li>Gelen talebi işler ve yanıt sağlar.</li>
+  <li>Gelen isteği kabul eder.</li>
+</ul>
+Şimdi daha iyi anlamak için gerçek hayat senaryosu düşünelim. Mediator pattern denince akla gelen ilk örnek tabi ki uçak ve kule örneğidir. Piste iniş yapacak yada kalkış gerçekleştirecek uçakların olası bir sorun yaşamamak için birbirleri ile haberleşmesi gerekmektedir. Şartlar uygun ve pist alanında başka uçak yok ise iniş yada kalkış gerçekleştirmektedirler. Uçaklar kendi aralarındaki bu iletişimi kule üzerinden gerçekleştirirler. Çünkü birbirleri ile iletişime geçmeleri halinde büyük bir karmaşıklık oluşacaktır. İletişim görevini kule üstlenerek bu oluşması muhtemel karmaşıklık ortadan kaldırmış olur.
+</p>
 
