@@ -287,4 +287,6 @@ Temel olarak Mediator iki işlem gerçekleştirir.
 </ul>
 Şimdi daha iyi anlamak için gerçek hayat senaryosu düşünelim. Mediator pattern denince akla gelen ilk örnek tabi ki uçak ve kule örneğidir. Piste iniş yapacak yada kalkış gerçekleştirecek uçakların olası bir sorun yaşamamak için birbirleri ile haberleşmesi gerekmektedir. Şartlar uygun ve pist alanında başka uçak yok ise iniş yada kalkış gerçekleştirmektedirler. Uçaklar kendi aralarındaki bu iletişimi kule üzerinden gerçekleştirirler. Çünkü birbirleri ile iletişime geçmeleri halinde büyük bir karmaşıklık oluşacaktır. İletişim görevini kule üstlenerek bu oluşması muhtemel karmaşıklık ortadan kaldırmış olur.
 </p>
-
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/mediator.png" width="40%" height="40%">
+</div><h2></h2>
