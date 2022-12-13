@@ -272,3 +272,7 @@ Avantajları;
   <li>Read ve write işlemleri birbirinden ayrıldığı için, herhangi yapılacak bir read işleminde write işlemini beklemek zorunda kalmayız.</li>
 </ul>
 </p>
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/CqrsPattern.png" width="60%" height="40%">
+</div>
+
