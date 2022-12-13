@@ -261,3 +261,14 @@ Proje içerisinde FileUpload yapısı Table Per Hierarchy (TPH) davranış model
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/genericRepositoryPattern.jpg" width="40%" height="40%">
 </div>
 
+<div align="center">
+<h1>Command Query Responsibility Segregation</h1>
+</div>
+<p>Command Query Responsibility Segregation (CQRS) pattern adından da anlaşılacağı gibi Command ve Query operasyonlarının birbirinden ayrılmasını savunan bir tasarım desenidir. Peki nedir bu Command ve Query operasyonları. Geliştirmiş olduğumuz projeye temelde iki çeşit istek yapılır bunlardan sistemde hiç bir değişiklik yapmadan sadece okuma/read işlemi yapanlara Query (GetAll, GetById), sistemde herhangi bir değişikliğe yol açan yeni bir veri ekleme, var olan veri üzerinde değişiklik yapma yada var olan veriyi silme gibi yazma/write işlemlerinede Command (Insert, Update, Delete) denir.
+Avantajları;
+<ul>
+  <li>CQRS, okuma ve yazma işlemlerinin birbirinden ayrılması iş yüklerinin bağımsız olarak ölçeklendirilebilmesine olanak tanır.</li>
+  <li>Read ve write işlemleriniz için farklı veritabanları kullanabilirsiniz.</li>
+  <li>Read ve write işlemleri birbirinden ayrıldığı için, herhangi yapılacak bir read işleminde write işlemini beklemek zorunda kalmayız.</li>
+</ul>
+</p>
