@@ -301,5 +301,6 @@ Temel olarak Mediator iki işlem gerçekleştirir.
 </div>
 <p>Bir yazılım geliştirici olarak yazdığımız kodun çalışması bizim için yeterli olmayabilir aynı zamanda sistemin düzgün ve kararlı bir çalışma göstermesi gerekir. Bu kararlılığı sağlamak için validasyon (doğrulama) işlemlerini kullanırız. Küçük sistemlerde if-else sorguları yada kendi yazdığımız basit yapıları kullanabiliyorken proje içeriği büyüdükçe işler daha da zorlaşabiliyor. Bu nedenle Fluent Validation kütüphanesinden yardım alıyoruz. Fluent Validation bir veri doğrulama kütüphanesidir. Verilere doğru şekilde kısıtlamalar eklenmesini sağlayarak kurallara uygun ve kullanıcı kaynaklı hataların önüne geçilmesinde bize yardımcı oluyor aynı zamanda birden çok if-else sorgusu yazmamıza gerek kalmadığı için kodun daha okunaklı ve anlaşılabilir olmasını sağlıyor.</p>
 <div align="center">
-<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/mediator.png" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation1.jpg" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation2.jpg" width="40%" height="40%">
 </div><h2></h2>
