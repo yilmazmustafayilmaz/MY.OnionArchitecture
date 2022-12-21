@@ -316,3 +316,7 @@ Temel olarak Mediator iki işlem gerçekleştirir.
   </ul>
 Identity kullanıcı yönetim sisteminin olmazsa olmazlarındandır. Kullanıcının sisteme girişi (Authentication) ve kullanıcının sistem içerisindeki yetkileri (Authorization) geliştiriciler tarafından yönetilmesi gereken önemli bir konudur.
 </p>
+<h2>Authentication</h2>
+<p>Authentication (Kimlik Doğrulama) bir kullanıcının sisteme giriş yetkisinin olup olmadığının kontrol edilmesi işlemidir.</p>
+<h2>Authorization</h2>
+<p>Authorization (Kimlik Yetkilendirme) sistemde var olan kullanıcının hangi yetkilere sahip olduğunun belirlenmesidir.</p>
