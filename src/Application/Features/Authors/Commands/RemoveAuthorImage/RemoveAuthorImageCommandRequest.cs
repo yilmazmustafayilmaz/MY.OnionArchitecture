@@ -1,7 +1,5 @@
 using Application.Repositories.AuthorImagesFiles;
-using Domain.Entities;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Authors.Commands.RemoveAuthorImage;
 

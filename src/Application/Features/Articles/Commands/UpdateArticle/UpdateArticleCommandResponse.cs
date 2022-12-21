@@ -1,6 +1,6 @@
 ﻿namespace Application.Features.Articles.Commands.UpdateArticle;
 
-public record UpdateArticleCommandResponse 
+public record UpdateArticleCommandResponse
 {
     public Guid Id { get; set; }
     public Guid AuthorId { get; set; }

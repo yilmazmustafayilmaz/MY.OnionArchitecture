@@ -1,13 +1,20 @@
 using Application;
+using Application.Filters;
+using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Storages.Local;
 using Persistence;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddNewtonsoftJson(opt =>
+builder.Services.AddControllers(opt => opt.Filters.Add<ValidationFilter>()).AddFluentValidation(conf =>
+{
+    conf.RegisterValidatorsFromAssemblyContaining<ValidationFilter>();
+}).ConfigureApiBehaviorOptions(opt => opt.SuppressModelStateInvalidFilter = true)
+.AddNewtonsoftJson(opt =>
 {
     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });

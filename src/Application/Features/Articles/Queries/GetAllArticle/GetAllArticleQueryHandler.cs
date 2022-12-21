@@ -1,6 +1,5 @@
 ﻿using Application.Repositories.Articles;
 using AutoMapper;
-using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Articles.Queries.GetAllArticle;

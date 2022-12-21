@@ -2,6 +2,7 @@ using Application.Repositories.Articles;
 using Application.Repositories.AuthorImagesFiles;
 using Application.Repositories.Authors;
 using Application.Repositories.Files;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,14 @@ public static class PersistenceServiceRegistration
     public static void AddPersistenceServices(this IServiceCollection services, IConfiguration Configuration)
     {
         services.AddDbContext<Context>(opt => opt.UseNpgsql(Configuration.GetConnectionString("PostgreSql")));
+
+        services.AddIdentity<AppUser, AppRole>(options =>
+        {
+            options.Password.RequiredLength = 3;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireDigit = false;
+            options.Password.RequireUppercase = false;
+        }).AddEntityFrameworkStores<Context>();
 
         //Article
         services.AddScoped<IArticleCommandRepository, ArticleCommandRepository>();

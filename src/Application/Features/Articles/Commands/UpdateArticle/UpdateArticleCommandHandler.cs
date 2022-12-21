@@ -1,6 +1,5 @@
 ﻿using Application.Repositories.Articles;
 using AutoMapper;
-using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Articles.Commands.UpdateArticle;
@@ -27,7 +26,7 @@ public class UpdateArticleCommandHandler : IRequestHandler<UpdateArticleCommandR
 
         var updated = await _articleCommandRepository.UpdateAsync(article);
         var mapped = _mapper.Map<UpdateArticleCommandResponse>(updated);
-        return mapped;    
+        return mapped;
     }
 }
 

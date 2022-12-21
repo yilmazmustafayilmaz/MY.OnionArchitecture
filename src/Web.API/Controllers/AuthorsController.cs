@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MediatR;
-using Application.Features.Authors.Commands.CreateAuthor;
-using Application.Features.Authors.Commands.UpdateAuthor;
+﻿using Application.Features.Authors.Commands.CreateAuthor;
+using Application.Features.Authors.Commands.CreateAuthorImage;
 using Application.Features.Authors.Commands.RemoveAuthor;
+using Application.Features.Authors.Commands.RemoveAuthorImage;
+using Application.Features.Authors.Commands.UpdateAuthor;
 using Application.Features.Authors.Queries.GetAllAuthor;
 using Application.Features.Authors.Queries.GetByIdAuthor;
-using Application.Features.Authors.Commands.CreateAuthorImage;
-using Application.Features.Authors.Commands.RemoveAuthorImage;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Web.API.Controllers;
 

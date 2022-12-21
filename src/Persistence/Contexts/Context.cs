@@ -1,11 +1,12 @@
 using Domain.Comman;
 using Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Configurations;
 
 namespace Persistence.Contexts;
 
-public class Context : DbContext
+public class Context : IdentityDbContext<AppUser, AppRole, Guid>
 {
     public Context(DbContextOptions<Context> options) : base(options) { }
     public DbSet<Author> Authors { get; set; }
@@ -17,6 +18,7 @@ public class Context : DbContext
     {
         modelBuilder.ApplyConfiguration(new AuthorConfiguration());
         modelBuilder.ApplyConfiguration(new ArticleConfiguration());
+        base.OnModelCreating(modelBuilder);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
