@@ -304,3 +304,14 @@ Temel olarak Mediator iki işlem gerçekleştirir.
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation1.jpg" width="40%" height="40%">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation2.jpg" width="40%" height="40%">
 </div><h2></h2>
+
+<div align="center">
+<h1>Identity</h1>
+</div>
+<p>Microsoft dokümantasyonu içerisinde Identity yapısını şöyle tanımlanıyor:
+  <ul>
+    <li>Kullanıcı arayüzü (UI) giriş işlevini destekleyen bir API</li>
+    <li>Kullanıcıları, şifreleri, profil verilerini, rolleri, istekleri, tokenları, e-posta onayını ve daha fazlasını yönetir.</li>
+  </ul>
+Identity kullanıcı yönetim sisteminin olmazsa olmazlarındandır. Kullanıcının sisteme girişi (Authentication) ve kullanıcının sistem içerisindeki yetkileri (Authorization) geliştiriciler tarafından yönetilmesi gereken önemli bir konudur.
+</p>
