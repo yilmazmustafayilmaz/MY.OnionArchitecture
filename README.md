@@ -307,6 +307,7 @@ Temel olarak Mediator iki işlem gerçekleştirir.
 
 <div align="center">
 <h1>Identity</h1>
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/identity.png" width="50%" height="50%">
 </div>
 <p>Microsoft dokümantasyonu içerisinde Identity yapısını şöyle tanımlanıyor:
   <ul>
