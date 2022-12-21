@@ -259,5 +259,48 @@ Proje içerisinde FileUpload yapısı Table Per Hierarchy (TPH) davranış model
 <p>Bir yazılım projesinin olmazsa olmaz konusu olan Repository Pattern hakkında biraz konuşalım. Generic Repository Pattern adından da anlaşılacağı gibi genel bir repository yapısı kurmamızı sağlıyor. Bu ne demek derseniz ortak veritabanı işlemlerimiz için merkezi ve genel bir yapı kurup her bir modelin bu yapı üzerinden işlem gerçekleştirmesini sağlamaktır. Daha anlaşılır bir örnek vermek gerekirse oluşturduğumuz her veritabanı nesnemiz için ortak olan Create, Read, Update, Delete (CRUD) işlemleri bulunmaktadır. Dont Repeat Yourself (DRY) prensibine uymak amacıyla bu CRUD işlemlerini her seferinde tekrarlamak yerine ortak bir repository sınıfı içerisinde oluşturup ihtiyaç dahilinde oluşturmuş olduğumuz sınıflarda kalıtım yoluyla kullanılmasıdır.</p>
 <div align="center">
 <img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/genericRepositoryPattern.jpg" width="40%" height="40%">
-</div>
+</div><h2></h2>
 
+<div align="center">
+<h1>Command Query Responsibility Segregation</h1>
+</div>
+<p>Command Query Responsibility Segregation (CQRS) pattern adından da anlaşılacağı gibi Command ve Query operasyonlarının birbirinden ayrılmasını savunan bir tasarım desenidir. Peki nedir bu Command ve Query operasyonları. Geliştirmiş olduğumuz projeye temelde iki çeşit istek yapılır bunlardan sistemde hiç bir değişiklik yapmadan sadece okuma/read işlemi yapanlara Query (GetAll, GetById), sistemde herhangi bir değişikliğe yol açan yeni bir veri ekleme, var olan veri üzerinde değişiklik yapma yada var olan veriyi silme gibi yazma/write işlemlerinede Command (Insert, Update, Delete) denir.
+Avantajları;
+<ul>
+  <li>CQRS, okuma ve yazma işlemlerinin birbirinden ayrılması iş yüklerinin bağımsız olarak ölçeklendirilebilmesine olanak tanır.</li>
+  <li>Read ve write işlemleriniz için farklı veritabanları kullanabilirsiniz.</li>
+  <li>Read ve write işlemleri birbirinden ayrıldığı için, herhangi yapılacak bir read işleminde write işlemini beklemek zorunda kalmayız.</li>
+</ul>
+</p>
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/CqrsPattern.png" width="60%" height="40%">
+</div><h2></h2>
+
+<div align="center">
+<h1>Mediator Design Pattern</h1>
+</div>
+<p>Mediator birden çok nesne veya sınıf arasındaki iletişim karmaşıklığını azaltmak için kullanılır. Bu pattern, normalde farklı sınıflar arasındaki tüm iletişimleri yöneten ve gevşek bağlantıyla kodun kolay bakımını destekleyen bir arabulucu sınıfı sağlar. Mediator pattern Behavioural Pattern (Davranışsal Desenler) kategorisine girer.
+Temel olarak Mediator iki işlem gerçekleştirir.
+<ul>
+  <li>Gelen talebi işler ve yanıt sağlar.</li>
+  <li>Gelen isteği kabul eder.</li>
+</ul>
+Şimdi daha iyi anlamak için gerçek hayat senaryosu düşünelim. Mediator pattern denince akla gelen ilk örnek tabi ki uçak ve kule örneğidir. Piste iniş yapacak yada kalkış gerçekleştirecek uçakların olası bir sorun yaşamamak için birbirleri ile haberleşmesi gerekmektedir. Şartlar uygun ve pist alanında başka uçak yok ise iniş yada kalkış gerçekleştirmektedirler. Uçaklar kendi aralarındaki bu iletişimi kule üzerinden gerçekleştirirler. Çünkü birbirleri ile iletişime geçmeleri halinde büyük bir karmaşıklık oluşacaktır. İletişim görevini kule üstlenerek bu oluşması muhtemel karmaşıklık ortadan kaldırmış olur.
+</p>
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/mediator.png" width="40%" height="40%">
+</div><h2></h2>
+
+<div align="center">
+<h1>AutoMapper</h1>
+</div>
+<p>AutoMapper birbirinden farklı tipteki complex objeleri birbirine otomatik bir şekilde dönüştürmeye yardımcı olan kütüphanedir. Kodun kirli görüntüsünden bizi kurtararak birden fazla satırda objenin her bir elemanını tek tek birbirine dönüştürmek yerine tek satırda objenin kendisini dönüştürmemize olanak sağlayarak fazla satır ile kodun kötü görünmesini engeller</p><h2></h2>
+
+<div align="center">
+<h1>Fluent Validation</h1>
+</div>
+<p>Bir yazılım geliştirici olarak yazdığımız kodun çalışması bizim için yeterli değildir, aynı zamanda sistemin düzgün ve kararlı bir çalışma göstermesini isteriz. Bu kararlılığı sağlamak için validasyon (doğrulama) işlemlerini kullanırız. Küçük sistemlerde if-else sorguları yada kendi yazdığımız basit yapıları kullanabiliyorken proje içeriği büyüdükçe işler daha da zorlaşabiliyor. Bu nedenle Fluent Validation kütüphanesinden yardım alıyoruz. Fluent Validation bir veri doğrulama kütüphanesidir. Verilere doğru şekilde kısıtlamalar eklenmesini sağlayarak kurallara uygun ve kullanıcı kaynaklı hataların önüne geçilmesinde bize yardımcı oluyor aynı zamanda birden çok if-else sorgusu yazmamıza gerek kalmadığı için kodun daha okunaklı ve anlaşılabilir olmasını sağlıyor.</p>
+<div align="center">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation1.jpg" width="40%" height="40%">
+<img src="https://github.com/yilmazmustafayilmaz/MY.OnionArchitecture/blob/master/images/fluentValidation2.jpg" width="40%" height="40%">
+</div><h2></h2>
