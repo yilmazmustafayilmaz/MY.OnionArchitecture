@@ -11,6 +11,7 @@ public static class InfrastructureServiceRegistration
     public static void AddInfrastructureServices(this IServiceCollection services)
     {
         services.AddScoped<IStorageService, StorageService>();
+        services.AddScoped<ITokenHandlerService, TokenHandlerService>();
     }
     public static void AddStorage<TStorage>(this IServiceCollection services) where TStorage : Storage, IStorage
     {

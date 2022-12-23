@@ -6,12 +6,15 @@ using Application.Features.Authors.Commands.UpdateAuthor;
 using Application.Features.Authors.Queries.GetAllAuthor;
 using Application.Features.Authors.Queries.GetByIdAuthor;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Web.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = "Admin")]
 public class AuthorsController : ControllerBase
 {
     private readonly IMediator _mediator;

@@ -19,7 +19,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest
     public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
     {
         var user = _mapper.Map<AppUser>(request);
-        var added = await _userManager.CreateAsync(user);
+        var added = await _userManager.CreateAsync(user, request.Password);
         var mapped = _mapper.Map<CreateUserCommandResponse>(added);
 
         if (added.Succeeded)
