@@ -9,10 +9,8 @@ namespace Persistence.Repositories.BaseRepositories;
 public class QueryRepository<TEntity> : IQueryRepository<TEntity> where TEntity : BaseEntity
 {
     private readonly Context _context;
-    public QueryRepository(Context context)
-    {
-        _context = context;
-    }
+    public QueryRepository(Context context) => _context = context;
+
     public DbSet<TEntity> Table => _context.Set<TEntity>();
 
     public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null, bool tracking = true)

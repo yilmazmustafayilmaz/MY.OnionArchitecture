@@ -14,10 +14,7 @@ public class ArticlesController : ControllerBase
 {
     private readonly IMediator _mediator;
 
-    public ArticlesController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    public ArticlesController(IMediator mediator) => _mediator = mediator;
 
     /// <summary>
     /// Create Article

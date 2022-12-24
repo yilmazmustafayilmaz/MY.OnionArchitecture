@@ -8,10 +8,7 @@ namespace Persistence.Repositories.BaseRepositories;
 public class CommandRepository<TEntity> : ICommandRepository<TEntity> where TEntity : BaseEntity
 {
     private readonly Context _context;
-    public CommandRepository(Context context)
-    {
-        _context = context;
-    }
+    public CommandRepository(Context context) => _context = context;
 
     public DbSet<TEntity> Table => _context.Set<TEntity>();
 

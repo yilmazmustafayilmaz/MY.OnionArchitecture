@@ -8,7 +8,6 @@ using Application.Features.Authors.Queries.GetByIdAuthor;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace Web.API.Controllers;
 
@@ -19,10 +18,7 @@ public class AuthorsController : ControllerBase
 {
     private readonly IMediator _mediator;
 
-    public AuthorsController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    public AuthorsController(IMediator mediator) => _mediator = mediator;
 
     /// <summary>
     /// Create Author

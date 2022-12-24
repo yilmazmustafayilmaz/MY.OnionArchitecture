@@ -1,4 +1,5 @@
 ﻿using Application.Constants;
+using Application.Dtos;
 using Application.Repositories.AuthorImagesFiles;
 using Application.Repositories.Authors;
 using Application.Services;
@@ -25,14 +26,14 @@ public class UploadAuthorImageCommandHandler : IRequestHandler<UploadAuthorImage
 
     public async Task<Unit> Handle(UploadAuthorImageCommandRequest request, CancellationToken cancellationToken)
     {
-        List<(string fileName, string path)> result = await _storageService.UploadAsync(request.Files, FilePath.ImagePath);
+        List<UploadDto> result = await _storageService.UploadAsync(request.Files, FilePath.ImagePath);
 
         Author author = await _authorQueryRepository.GetByIdAsync(request.AuthorId.ToString());
 
         await _authorImageFileCommandRepository.AddRangeAsync(result.Select(x => new AuthorImageFile
         {
-            FileName = x.fileName,
-            Path = x.path,
+            FileName = x.FileName,
+            Path = x.Path,
             Storage = _storageService.StorageName,
             Author = author
         }).ToList());

@@ -1,7 +1,5 @@
 namespace Infrastructure.Storages;
 
-public class Storage
-{
-}
+public class Storage { }
 
 

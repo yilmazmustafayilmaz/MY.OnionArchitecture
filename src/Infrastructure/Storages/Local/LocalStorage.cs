@@ -1,3 +1,4 @@
+using Application.Dtos;
 using Application.Storages.Local;
 using Microsoft.AspNetCore.Http;
 
@@ -10,18 +11,18 @@ public class LocalStorage : Storage, ILocalStorage
         if (File.Exists(path)) File.Delete(path);
     }
 
-    public async Task<List<(string fileName, string path)>> UploadAsync(IFormFileCollection files, string path)
+    public async Task<List<UploadDto>> UploadAsync(IFormFileCollection files, string path)
     {
         if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
-        List<(string fileName, string path)> datas = new();
+        List<UploadDto> datas = new();
         foreach (var file in files)
         {
             var extension = Path.GetExtension(file.FileName);
             var guid = Guid.NewGuid().ToString();
             var root = guid + extension;
             await CopyFileAsync(file, root, path);
-            datas.Add((file.FileName, path + root));
+            datas.Add(new() { FileName = file.FileName, Path = root + path });
         }
         return datas;
     }
