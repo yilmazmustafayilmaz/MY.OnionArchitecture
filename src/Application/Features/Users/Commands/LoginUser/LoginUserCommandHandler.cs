@@ -1,39 +1,25 @@
-﻿using Application.Exceptions;
-using Application.Services;
-using Domain.Entities;
+﻿using Application.Services;
+using AutoMapper;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 
 namespace Application.Features.Users.Commands.LoginUser;
 
 public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
 {
-    private readonly UserManager<AppUser> _userManager;
-    private readonly SignInManager<AppUser> _signInManager;
-    private readonly ITokenHandlerService _tokenHandlerService;
+    private readonly IAuthService _authService;
+    private readonly IMapper _mapper;
 
-    public LoginUserCommandHandler(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenHandlerService tokenHandlerService)
+    public LoginUserCommandHandler(IAuthService authService, IMapper mapper)
     {
-        _userManager = userManager;
-        _signInManager = signInManager;
-        _tokenHandlerService = tokenHandlerService;
+        _authService = authService;
+        _mapper = mapper;
     }
 
     public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
     {
-        var user = await _userManager.FindByNameAsync(request.UsernameOrEmail);
-        if (user is null) user = await _userManager.FindByEmailAsync(request.UsernameOrEmail);
-
-        if (user is null) throw new NotFoundUserException();
-
-        var result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
-
-        if (result.Succeeded)
-        {
-            var token = _tokenHandlerService.CreateAccessToken(5);
-            return new LoginUserCommandResponse() { Token = token };
-        }
-        throw new AuthenticationException();
+        var token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 15);
+        var mapped = _mapper.Map<LoginUserCommandResponse>(token);
+        return mapped;
     }
 }
 

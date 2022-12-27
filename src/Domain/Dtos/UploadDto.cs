@@ -1,4 +1,4 @@
-namespace Application.Dtos;
+namespace Domain.Dtos;
 
 public class UploadDto
 {

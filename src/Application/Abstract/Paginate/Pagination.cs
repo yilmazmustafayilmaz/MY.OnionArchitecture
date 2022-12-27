@@ -1,4 +1,4 @@
-namespace Application.Paginate;
+namespace Application.Abstract.Paginate;
 
 public class Pagination
 {

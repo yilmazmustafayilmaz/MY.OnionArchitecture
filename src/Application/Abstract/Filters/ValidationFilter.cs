@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Application.Filters;
+namespace Application.Abstract.Filters;
 
 public class ValidationFilter : IAsyncActionFilter
 {

@@ -1,6 +1,6 @@
-﻿using Application.Storages;
+﻿using Application.Abstract.Storages;
 
-namespace Application.Services;
+namespace Application.Abstract.Services;
 
 public interface IStorageService : IStorage
 {

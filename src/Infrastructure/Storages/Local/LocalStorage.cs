@@ -1,5 +1,5 @@
-using Application.Dtos;
-using Application.Storages.Local;
+using Application.Abstract.Storages.Local;
+using Domain.Dtos;
 using Microsoft.AspNetCore.Http;
 
 namespace Infrastructure.Storages.Local;

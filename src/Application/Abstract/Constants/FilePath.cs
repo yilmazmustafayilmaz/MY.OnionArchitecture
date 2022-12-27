@@ -1,4 +1,4 @@
-namespace Application.Constants;
+namespace Application.Abstract.Constants;
 
 public static class FilePath
 {

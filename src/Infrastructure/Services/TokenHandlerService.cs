@@ -1,5 +1,5 @@
-using Application.Dtos;
 using Application.Services;
+using Domain.Dtos;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

@@ -1,4 +1,3 @@
-using Application.Features.Articles.Queries.GetAllArticle;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;

@@ -21,11 +21,5 @@ public class UsersController : ControllerBase
     [HttpPost("[action]")]
     public async Task<IActionResult> Create([FromBody] CreateUserCommandRequest createUserCommandRequest) => Ok(await _mediator.Send(createUserCommandRequest));
 
-    /// <summary>
-    /// Login User
-    /// </summary>
-    /// <param name="loginUserCommandRequest"></param>
-    /// <returns></returns>
-    [HttpPost("[action]")]
-    public async Task<IActionResult> Login([FromBody] LoginUserCommandRequest loginUserCommandRequest) => Ok(await _mediator.Send(loginUserCommandRequest));
+    
 }

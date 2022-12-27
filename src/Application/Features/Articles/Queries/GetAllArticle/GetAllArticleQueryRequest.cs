@@ -1,4 +1,4 @@
-using Application.Paginate;
+using Application.Abstract.Paginate;
 using MediatR;
 
 namespace Application.Features.Articles.Queries.GetAllArticle;

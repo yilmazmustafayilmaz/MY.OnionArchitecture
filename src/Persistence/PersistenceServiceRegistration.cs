@@ -2,6 +2,7 @@ using Application.Repositories.Articles;
 using Application.Repositories.AuthorImagesFiles;
 using Application.Repositories.Authors;
 using Application.Repositories.Files;
+using Application.Services;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +12,7 @@ using Persistence.Repositories.Articles;
 using Persistence.Repositories.AuthorImageFiles;
 using Persistence.Repositories.Authors;
 using Persistence.Repositories.Files;
+using Persistence.Services;
 
 namespace Persistence;
 
@@ -40,6 +42,10 @@ public static class PersistenceServiceRegistration
         //File
         services.AddScoped<IFileCommandRepository, FileCommandRepository>();
         services.AddScoped<IFileQueryRepository, FileQueryRepository>();
+        //User
+        services.AddScoped<IUserService, UserService>();
+        //Auth
+        services.AddScoped<IAuthService, AuthService>();
     }
 }
 

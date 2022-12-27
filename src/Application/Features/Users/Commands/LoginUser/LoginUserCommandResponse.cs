@@ -1,4 +1,4 @@
-﻿using Application.Dtos;
+﻿using Domain.Dtos;
 
 namespace Application.Features.Users.Commands.LoginUser;
 

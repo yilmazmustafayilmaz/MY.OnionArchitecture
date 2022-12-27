@@ -1,8 +1,6 @@
-﻿using Application.Paginate;
-using Application.Repositories.Articles;
+﻿using Application.Repositories.Articles;
 using Application.Services;
 using AutoMapper;
-using Domain.Comman;
 using Domain.Entities;
 using MediatR;
 

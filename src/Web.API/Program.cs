@@ -1,5 +1,5 @@
 using Application;
-using Application.Filters;
+using Application.Abstract.Filters;
 using FluentValidation.AspNetCore;
 using Infrastructure;
 using Infrastructure.Storages.Local;

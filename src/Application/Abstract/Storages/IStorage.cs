@@ -1,7 +1,7 @@
-using Application.Dtos;
+using Domain.Dtos;
 using Microsoft.AspNetCore.Http;
 
-namespace Application.Storages;
+namespace Application.Abstract.Storages;
 
 public interface IStorage
 {

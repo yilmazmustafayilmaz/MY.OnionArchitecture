@@ -1,4 +1,4 @@
-using Application.Paginate;
+using Application.Abstract.Paginate;
 using Domain.Comman;
 
 namespace Application.Services;
