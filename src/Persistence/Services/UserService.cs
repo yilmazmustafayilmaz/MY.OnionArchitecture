@@ -1,3 +1,4 @@
+using Application.Exceptions;
 using Application.Services;
 using Domain.Dtos;
 using Domain.Entities;
@@ -34,5 +35,16 @@ public class UserService : IUserService
                 response.Message += $"{error.Code} - {error.Description}";
 
         return response;
+    }
+    public async Task InsertRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
+    {
+        if (user != null)
+        {
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenEndDate = accessTokenDate.AddMinutes(addOnAccessTokenDate);
+            await _userManager.UpdateAsync(user);
+        }
+        else
+            throw new NotFoundUserException();
     }
 }

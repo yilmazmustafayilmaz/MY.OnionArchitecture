@@ -1,5 +1,4 @@
 ﻿using Application.Features.Users.Commands.CreateUser;
-using Application.Features.Users.Commands.LoginUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +19,4 @@ public class UsersController : ControllerBase
     /// <returns></returns>
     [HttpPost("[action]")]
     public async Task<IActionResult> Create([FromBody] CreateUserCommandRequest createUserCommandRequest) => Ok(await _mediator.Send(createUserCommandRequest));
-
-    
 }
