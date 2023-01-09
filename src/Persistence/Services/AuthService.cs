@@ -32,7 +32,7 @@ public class AuthService : IAuthService
 
         if (result.Succeeded)
         {
-            TokenDto token = _tokenHandlerService.CreateAccessToken(accessTokenLifeTime);
+            TokenDto token = _tokenHandlerService.CreateAccessToken(accessTokenLifeTime, user);
             return token;
         }
         throw new AuthenticationException();
@@ -43,7 +43,7 @@ public class AuthService : IAuthService
         var user = await _userManager.Users.FirstOrDefaultAsync(x => x.RefreshToken == refreshToken);
         if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
         {
-            var token = _tokenHandlerService.CreateAccessToken(15);
+            var token = _tokenHandlerService.CreateAccessToken(15, user);
             await _userService.InsertRefreshToken(token.RefreshToken, user, token.Expiration, 15);
             return token;
         }
