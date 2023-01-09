@@ -327,3 +327,12 @@ Identity kullanıcı yönetim sisteminin olmazsa olmazlarındandır. Kullanıcı
 <h2>Third Party Authentication</h2>
 <p>Third Party Authentication (Üçüncü taraf kimlik doğrulamadır) kullanıcının aktif olarak oluşturmuş olduğu sosyal medya kanalları ile giriş yapabilmesidir. Örneğin Facebook, Twitter, Google</p>
 
+<div align="center">
+<h1>Log</h1>
+</div>
+<p>Loglama, bir sistem üzerinde gerçekleştirilen işlemlerin kayıt altında tutulmasıdır. Örnek verecek olursak sisteme kim giriş yaptı? Sistemi kim kullanıyordu? Hata kodu nedir? Ne zaman gerçekleşti? Uygulama neden başarısız oldu? gibi kayıtlar oluşturmamızı sağlar. Loglar aynı zamanda uygulamanın runtime'da yaşadığı problemleri yönetebilmemiz konusunda da bize kolaylık sağlar.</p>
+<h2>Serilog</h2>
+<p>Serilog, sistemdeki logları console, file, database vb. aktarmamızı sağlayan bir kütüphanedir. Serilog kütüphanesini diğer log kütüphanelerinden ayıran durum oldukça kullanışlı bir şekilde yapılandırılmış günlük kaydı (Structed Logging) özelliğidir. Ayrıca performans konusunda da çok başarılı bir log kütüphanesidir.</p>
+<h2>Structured Logging</h2>
+<p>Structured Logging, bir veriyi nesne yapısında loglama ve bu yapısal veriyi kolay bir şekilde sorgulama işlemidir diyebiliriz.</p>
+
