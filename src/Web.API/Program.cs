@@ -14,6 +14,7 @@ using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
 using System.Text;
 using Web.API.Configurations.ColumnWriters;
+using Web.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -112,6 +113,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ConfigurationExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
+
 app.UseStaticFiles();
 
 app.UseSerilogRequestLogging();
@@ -122,13 +126,7 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.Use(async (context, next) =>
-{
-    var username = context.User?.Identity.IsAuthenticated != null || true ? context.User.Identity.Name : null;
-    LogContext.PushProperty("user_name", username);
-
-    await next();
-});
+app.ConfigurationUseLogger();
 
 app.MapControllers();
 
