@@ -2,6 +2,7 @@ using Application;
 using Application.Abstract.Filters;
 using FluentValidation.AspNetCore;
 using Infrastructure;
+using Infrastructure.SignalR;
 using Infrastructure.Storages.Local;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
@@ -63,6 +64,13 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddStorage<LocalStorage>();
+
+builder.Services.AddCors(opt => opt.AddDefaultPolicy(policy =>
+{
+    policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
+    .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+}));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -122,6 +130,8 @@ app.UseSerilogRequestLogging();
 
 app.UseHttpLogging();
 
+app.UseCors();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -129,5 +139,7 @@ app.UseAuthorization();
 app.ConfigurationUseLogger();
 
 app.MapControllers();
+
+app.MapHubs();
 
 app.Run();

@@ -14,6 +14,9 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IStorageService, StorageService>();
         services.AddScoped<ITokenHandlerService, TokenHandlerService>();
         services.AddScoped(typeof(IPaginationService<>), typeof(PaginationService<>));
+
+        services.AddSignalR();
+        services.AddScoped<IArticleHubService, ArticleHubService>();
     }
     public static void AddStorage<TStorage>(this IServiceCollection services) where TStorage : Storage, IStorage
     {
