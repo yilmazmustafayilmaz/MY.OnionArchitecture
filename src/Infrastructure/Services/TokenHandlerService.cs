@@ -34,7 +34,7 @@ public class TokenHandlerService : ITokenHandlerService
                 expires: tokenDto.Expiration,
                 notBefore: DateTime.UtcNow,
                 signingCredentials: signingCredentials,
-                claims: new List<Claim> { new(ClaimTypes.Name, appUser.UserName)}
+                claims: new List<Claim> { new(ClaimTypes.Name, appUser.UserName) }
             );
 
         JwtSecurityTokenHandler tokenHandler = new();

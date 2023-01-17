@@ -8,6 +8,7 @@ public static class MapHubRegistration
     public static void MapHubs(this WebApplication app)
     {
         app.MapHub<ArticleHub>("/articles-hub");
+        app.MapHub<AuthorHub>("/authors-hub");
     }
 }
 
