@@ -336,3 +336,7 @@ Identity kullanıcı yönetim sisteminin olmazsa olmazlarındandır. Kullanıcı
 <h2>Structured Logging</h2>
 <p>Structured Logging, bir veriyi nesne yapısında loglama ve bu yapısal veriyi kolay bir şekilde sorgulama işlemidir diyebiliriz.</p>
 
+<div align="center">
+<h1>SignalR</h1>
+</div>
+<p>SignalR, açık kaynak kodlu bir .Net kütüphanesidir, gerçek zamanlı çalışan uygulamalar geliştirmek için kullanılır. Http bağlantılarında client ile server arasındaki iletişim her istek yapıldığında yenilenirken, SignalR ile client ve server arasında sürekli bir bağlantı oluşturulur. Bunu daha iyi anlamak için şu iki kıyası yapabiliriz. Bir veri üzerinde değişiklik yapmak istedeğimizde Http protokolü vasıtasıyla bu işlemi gerçekleştirmiş olsaydık bu güncellemenin görüntülenmesi için sayfayı yenilemek durumunda kalırdık. Ancak SignalR kütüphanesinde bulunan Remote Procedure Calls (RPC) özelliği ile bir veride değişiklik olduğunda server bir javascript (js) kodu çağırarak bunu Client'lara haber verir. Bu sayede gerçek zamanlı olarak çalışan uygulamalar elde edebiliriz.</p>
