@@ -3,6 +3,8 @@ using Application.Features.Articles.Commands.RemoveArticle;
 using Application.Features.Articles.Commands.UpdateArticle;
 using Application.Features.Articles.Queries.GetAllArticle;
 using Application.Features.Articles.Queries.GetByIdArticle;
+using Application.Services;
+using Domain.Dtos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +15,13 @@ namespace Web.API.Controllers;
 public class ArticlesController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly IMailService _mailService;
 
-    public ArticlesController(IMediator mediator) => _mediator = mediator;
+    public ArticlesController(IMediator mediator, IMailService mailService) 
+    {
+        _mailService = mailService;
+    }
+
 
     /// <summary>
     /// Create Article

@@ -18,6 +18,7 @@ public static class InfrastructureServiceRegistration
         services.AddSignalR();
         services.AddScoped<IArticleHubService, ArticleHubService>();
         services.AddScoped<IAuthorHubService, AuthorHubService>();
+        services.AddScoped<IMailService, MailService>();
     }
     public static void AddStorage<TStorage>(this IServiceCollection services) where TStorage : Storage, IStorage
     {
